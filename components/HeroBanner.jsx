@@ -3,7 +3,9 @@ import React from 'react'
 const HeroBanner = () => {
 
   return (
-    <div> Hero Banner</div>
+    <div className='hero-banner-container'>
+
+    </div>
   )
 }
 
