@@ -13,6 +13,10 @@ export const StateContext = ({children}) => {
     let foundProduct;
     let index;
 
+    const payNow = () => {
+        toast.error("Sorry. This feature has not yet been implemented.")
+    }
+
     const onAdd = (product, quantity) => {
         
         const checkProductInCart = cartItems.find((item) => item._id === product._id)
@@ -93,7 +97,8 @@ export const StateContext = ({children}) => {
             decQty,
             onAdd,
             toggleCartItemQuantity,
-            onRemove
+            onRemove,
+            payNow
         }}>
             {children}
         </Context.Provider>

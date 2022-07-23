@@ -9,7 +9,13 @@ import { urlFor } from '../lib/client'
 const Cart = () => {
 
   const cartRef = useRef();
-  const {totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove} = useStateContext();
+  const {totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove, payNow} = useStateContext();
+
+  const pay = () => (
+    <div>
+      This Feature has not yet been implented. 
+    </div>
+  )
 
   return (
     <div className='cart-wrapper' ref={cartRef}>
@@ -71,7 +77,7 @@ const Cart = () => {
                 <h3>${totalPrice}</h3>
               </div>
               <div className='btn-container'>
-                <button type='button' className='btn' onClick="">
+                <button type='button' className='btn' onClick={() => payNow()}>
                   Pay With Stripe
                 </button>
               </div>
