@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import Link from 'next/link'
-
 import { urlFor } from '../lib/client'
 import { useStateContext } from '../context/StateContext'
 
@@ -10,20 +9,14 @@ const HeroBanner = ({heroBanner}) => {
 
 
   return (
-    <div className='hero-banner-container'>
+    <div className='hero-banner-container' whileInView={{ x: [-100, 0], opacity: [0,1]}}
+    transition={{ duration: 0.5 }}>
       <div>
-        <p className='beats-solo'>{heroBanner.smallText}</p>
-        <h3>{heroBanner.midText}</h3>
-        <h1>{heroBanner.largeText1}</h1>
-        <img src={urlFor(heroBanner.image)} alt="headphones" className='hero-banner-image'/>
+       
+        <h1>Soroush's <br/> <span>Books</span></h1>
+        <img src={urlFor(heroBanner.image)} alt="Book" className='hero-banner-image'/>
         <div>
-         
               <button type='button' onClick={() => payNow()}>{heroBanner.buttonText}</button>
-        
-          <div className='desc'>
-            <h5>Description</h5>
-            <p>{heroBanner.desc}</p>
-          </div>
         </div>
       </div>
     </div>

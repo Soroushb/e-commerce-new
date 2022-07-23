@@ -163,7 +163,7 @@ width: 100%;
   background-color: #f02d34;
   color: white;
   border: none;
-  margin-top: 40px;
+  margin-top: 30px;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
@@ -171,21 +171,31 @@ width: 100%;
 }
 
 .hero-banner-container h3{
+  
   font-size: 4rem;
   margin-top: 4px;
 }
 .hero-banner-container h1{
-  color: white;
-  font-size: 10em;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 5.5em;
   margin-left: -20px;
+  margin-top: 30px;
   text-transform: uppercase;
 }
+
+.hero-banner-container span{
+  color: white;
+}
+
 .hero-banner-image{
   position: absolute;
+  opacity: 0.5;
+  left: 36.5%;
   top: 0%;
   right:20%;
-  width: 450px;
-  height: 450px;
+  width: 889px;
+  height: 500px;
 }
 
 
@@ -463,7 +473,7 @@ padding: 30px 65px;
   border-radius: 8px;
   background-color: #ebebeb;
   width: 70px;
-  height: 70px;
+  height: 90px;
   cursor: pointer;
 }
 
@@ -641,9 +651,9 @@ margin-top: 160px;
     height: 560px;
   }
   .hero-banner-image{
-    width: 77%;
+    width: 55%;
     height: 62%;
-    top: -2%;
+    top: -20%;
     right: -6%;
   }
   .footer-banner-container{
