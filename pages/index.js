@@ -1,8 +1,39 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Product, FooterBanner, HeroBanner } from '../components'
 import { client } from '../lib/client';
+import { useStateContext } from '../context/StateContext'
+import { motion } from 'framer-motion';
+
+
 
 const Home = ({products, bannerData}) => {
+
+  const {activeFilter, setActiveFilter, ourProducts, setOurProducts, filterProducts, setFilterProducts} = useStateContext();
+
+  /*useEffect(() => {
+    const query = '*[_type == "product"]';
+
+    client.fetch(query).then((data) => {
+      setOurProducts(data);
+      setFilterProducts(data);
+    });
+  }, []);*/
+
+
+  
+  const handleProductFilter = (item) => {
+    setActiveFilter(item);
+
+    setTimeout(() => {
+
+      if (item === 'All') {
+        setFilterProducts(products);
+      } else {
+        setFilterProducts(products.filter((product) => product.tag === item));
+      }
+    }, 500);
+  };
+
   return (<>
   <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
 
@@ -10,9 +41,23 @@ const Home = ({products, bannerData}) => {
       <h2>Recommended</h2>
       <p>Second-hand Classic Books in Great Condition</p>
     </div>
+
+    <div className="app__work-filter">
+        {['All', 'fiction', 'philosophy', 'art', 'poetry', 'other'].map((item, index) => (
+          <button
+            key={index}
+            onClick={() => handleProductFilter(item)}
+            className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
+          >
+            {item}
+          </button>
+        ))}
+      </div>
+
     <div className='products-container'>
-      {products?.map((product) => <Product key={product._id} product={product}/>)}
+      {filterProducts?.map((product) => <Product key={product._id} product={product}/>)}
     </div>
+
     <FooterBanner footerBanner={bannerData && bannerData[0]}/>
     </>
   )
