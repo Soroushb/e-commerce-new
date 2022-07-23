@@ -145,6 +145,40 @@ width: 100%;
   color: black;
 }
 
+.product-filter{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.app__work-filter-item{
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  background-color: #EF5D59;
+  color: white;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0.5em;
+}
+
+.app__work-filter-item:hover{
+  transform: scale(1.2);
+}
+
+.item-active{
+
+  transform: scale(1.1);
+  background-color: white;
+  color: #f02d34;
+  font-weight: 500;
+  
+}
+
+
 .hero-banner-container{
   padding: 100px 40px;
   background-color: #dcdcdc;

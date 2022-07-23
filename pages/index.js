@@ -42,15 +42,15 @@ const Home = ({products, bannerData}) => {
       <p>Second-hand Classic Books in Great Condition</p>
     </div>
 
-    <div className="app__work-filter">
+    <div className="product-filter">
         {['All', 'fiction', 'philosophy', 'art', 'poetry', 'other'].map((item, index) => (
-          <button
+          <div
             key={index}
             onClick={() => handleProductFilter(item)}
             className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
           >
             {item}
-          </button>
+          </div>
         ))}
       </div>
 
