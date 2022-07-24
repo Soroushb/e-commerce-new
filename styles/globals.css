@@ -364,7 +364,9 @@ text-align: end;
   gap: 10px;
   justify-content: center;
 
+
 }
+
 .footer-container .icons{
   font-size: 30px;
   display: flex;
@@ -689,10 +691,11 @@ margin-top: 160px;
     height: 560px;
   }
   .hero-banner-image{
-    width: 55%;
-    height: 62%;
-    top: -20%;
-    right: -6%;
+    width: 80%;
+    height: 42%;
+    top: 20%;
+    right: 80%;
+    opacity: 0;
   }
   .footer-banner-container{
     height: 560px;

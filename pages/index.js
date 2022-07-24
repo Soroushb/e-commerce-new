@@ -37,6 +37,10 @@ const Home = ({products, bannerData}) => {
   return (<>
   <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
 
+    {useEffect(()=>{
+      handleProductFilter('All')
+    }, [])}
+
     <div className='products-heading'>
       <h2>Recommended</h2>
       <p>Second-hand Classic Books in Great Condition</p>
