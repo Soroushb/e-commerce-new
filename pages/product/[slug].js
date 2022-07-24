@@ -1,14 +1,25 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { urlFor, client } from '../../lib/client'
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext'
+import { toast } from 'react-hot-toast';
+
 
 const ProductDetails = ({product, products}) => {
     const {image, name, details, price} = product;
     const [index, setIndex] = useState(0)
-    const {incQty, decQty, qty, onAdd} = useStateContext();
+    const {incQty, decQty, qty, onAdd, filterProducts, setFilterProducts} = useStateContext();
 
+    
+  const buyNow = () => {
+
+    toast.error("Sorry, This feature is unavailable at the moment.");
+  }
+
+  {useEffect(()=>{
+    setFilterProducts(products.filter((singleProduct) => singleProduct.tag === product.tag && singleProduct._id != product._id))
+  }, [])}
 
   return (
     <div>
@@ -58,24 +69,31 @@ const ProductDetails = ({product, products}) => {
                   <button type='button' className='add-to-cart' onClick={() => onAdd(product, qty)}>
                     Add To Cart
                   </button>
-                  <button type='button' className='buy-now' onClick="">
+                  <button type='button' className='buy-now' onClick={()=>{buyNow()}}>
                     Buy Now
                   </button>
                 </div>
             </div>
         </div>
-        <div className='maylike-products-wrapper'>
+
+        {filterProducts.length < 1 && (
+          <div className='maylike-products-wrapper'>
+              <h2>Sorry, We Have No Similar Books</h2>
+              </div>
+              )}
+        {filterProducts.length >= 1 &&(<div className='maylike-products-wrapper'>
               <h2>You May Also Like</h2>
               <div className='marquee'>
               <div className='maylike-products-container track'>
-              {products.map((item) => (
+              
+              {filterProducts.map((item) => (
                 <Product key={item._id} product={item}/>
               ))}
 
               </div>
 
               </div>
-        </div>
+        </div>)}
     </div>
   )
 }
