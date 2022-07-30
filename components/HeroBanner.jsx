@@ -15,7 +15,7 @@ const HeroBanner = ({heroBanner}) => {
        
         <h1>Soroush's <br/> <span>Books</span></h1>
         <img src={urlFor(heroBanner.image)} alt="Book" className='hero-banner-image'/>
-        <div>
+        <div className='shop-now'>
               <button type='button' onClick={() => payNow()}>{heroBanner.buttonText}</button>
         </div>
       </div>

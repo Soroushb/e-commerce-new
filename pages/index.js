@@ -12,7 +12,6 @@ const Home = ({products, bannerData}) => {
 
   /*useEffect(() => {
     const query = '*[_type == "product"]';
-
     client.fetch(query).then((data) => {
       setOurProducts(data);
       setFilterProducts(data);
