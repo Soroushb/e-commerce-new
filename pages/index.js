@@ -61,7 +61,7 @@ const Home = ({products, bannerData}) => {
       {filterProducts?.map((product) => <Product key={product._id} product={product}/>)}
     </div>
 
-    <FooterBanner footerBanner={bannerData && bannerData[0]}/>
+    <FooterBanner footerBanner={products[3]}/>
     </>
   )
 }

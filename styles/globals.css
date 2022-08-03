@@ -285,6 +285,8 @@ text-align: end;
   width: 100%;
   margin-top: 120px;
 }
+
+
 .banner-desc{
   display: flex ;
   justify-content: space-between;
@@ -301,12 +303,21 @@ text-align: end;
   cursor: pointer;
 }
 .banner-desc .left h3{
-  font-weight: 900;
-  font-size: 80px;
-  margin-left: 25px;
+  font-weight: 400;
+  font-size: 50px;
+  margin-left: 5px;
+}
+
+.banner-desc .left h4{
+  font-weight: 600;
+  font-size: 70px;
+  margin-left: 5px;
+  margin-bottom: 15px;
 }
 .banner-desc .left p{
-  margin:18px;
+  margin:5px;
+  width: 70%;
+  margin-top: 20px;
 }
 .footer-banner-image{
   position: absolute;
@@ -314,7 +325,7 @@ text-align: end;
   /* 
   left: 8%; */
   top: -25%;
-  left: 45%;
+  left: 71%;
 
 }
 .banner-desc .right{
@@ -706,25 +717,36 @@ margin-top: 160px;
     opacity: 0;
   }
   .footer-banner-container{
-    height: 560px;
+    height: 400px;
     margin-top: 80px;
   }
   .footer-banner-image{
     width: 77%;
     left: 30%;
     top: 6%;
-    height: 56%
+    height: 56%;
+    opacity: 0;
+  
   }
   .banner-desc .left h3{
-    font-weight: 900;
-    font-size: 50px;
-    margin-left: 5px;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .banner-desc .left h4{
+    font-size: 30px;
+    font-weight: 500;
+
+    margin-bottom: 40px;
   }
   .banner-desc .left p{
     margin:18px;
+    opacity: 0;
   }
   .banner-desc .right h3{
     font-size: 45px;
+    margin: 15px;
   }
   .banner-desc .right p{
     font-size: 18px;
