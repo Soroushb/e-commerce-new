@@ -575,8 +575,8 @@ padding: 30px 65px;
   margin-top: 40px;
   font-size: 18px;
   font-weight: 500;
-  background-color: white;
-  color: #f02d34;
+  background-color: #f02d34;
+  color: white;
   cursor: pointer;
   width: 200px;
    transform: scale(1, 1);
@@ -778,11 +778,11 @@ margin-top: 160px;
     flex-wrap: wrap;
     }
   .product-detail-container .product-detail-image{
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 300px;
   }
   .cart-container{
-    width: 415px;
+  width: 215px;
   padding: 4px;
   }
   .cart-heading{
@@ -807,6 +807,8 @@ margin-top: 160px;
   }
   .product-detail-container{
     margin: 20px;
+    font-size: 90%;
+    width: 90%;
   }
 
 .item-desc .flex{
