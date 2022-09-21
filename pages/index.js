@@ -25,7 +25,7 @@ const Home = ({products, bannerData}) => {
 
     setTimeout(() => {
 
-      if (item === 'All') {
+      if (item === 'ALL') {
         setFilterProducts(products);
       } else {
         setFilterProducts(products.filter((product) => product.tag === item));
@@ -37,7 +37,7 @@ const Home = ({products, bannerData}) => {
   <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
 
     {useEffect(()=>{
-      handleProductFilter('All')
+      handleProductFilter('ALL')
     }, [])}
 
     <div className='products-heading'>
@@ -46,7 +46,7 @@ const Home = ({products, bannerData}) => {
     </div>
 
     <div className="product-filter">
-        {['All', 'fiction', 'philosophy', 'art', 'poetry', 'other'].map((item, index) => (
+        {['ALL', 'FICTION', 'PHILOSOPHY', 'ART', 'POETRY', 'OTHER'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleProductFilter(item)}
