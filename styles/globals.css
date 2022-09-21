@@ -157,7 +157,7 @@ width: 100%;
   padding: 0.5em 1em;
   border-radius: 0.5em;
   cursor: pointer;
-  background-color: #EF5D59;
+  background-color: #046307;
   color: white;
   font-weight: 300;
   cursor: pointer;
@@ -173,7 +173,7 @@ width: 100%;
 
   transform: scale(1.1);
   background-color: white;
-  color: #f02d34;
+  color: #046307;
   font-weight: 500;
   
 }
@@ -225,7 +225,7 @@ width: 100%;
 
 .hero-banner-image{
   position: absolute;
-  opacity: 0.5;
+  opacity: 0.7;
   left: 36.5%;
   top: 0%;
   right:20%;
@@ -697,7 +697,7 @@ margin-top: 160px;
   margin-top: 10px;
 }
 
-@media screen and (max-width:550px) {
+@media screen and (max-width:590px) {
   .hero-banner-container{
     padding: 100px 40px;
   background-color: #046307;
@@ -721,6 +721,7 @@ margin-top: 160px;
   .shop-now{
     opacity: 0;
   }
+
   .hero-banner-image{
     position: absolute;
     width: 99%;
@@ -728,8 +729,6 @@ margin-top: 160px;
     top: 1%;
     left: .5%;
   }
-
-  
 
   .footer-banner-container{
     height: 400px;
@@ -878,15 +877,32 @@ margin-top: 160px;
 }
 }
 
-@media screen and (max-width:800px) and (min-width: 550px) {
+@media screen and (max-width:900px) and (min-width: 590px) {
  
   .hero-banner-container{
-  padding: 100px 40px;
-  background-color: white;
+  
   border-radius: 15px;
   position: relative;
   height: 400px;
+  background-color: #046307;
   line-height: 0.9; 
   width: 100%;
+  }
+
+  .hero-banner-container h1{
+
+    font-size: 48px;
+
+  }
+
+  .hero-banner-image{
+  position: absolute;
+  opacity: 0.7;
+  left: 25%;
+  top: 1%;
+  right: 90%;
+  width: 75%;
+  height: 99%;
+  border-radius: 10px;
   }
 }

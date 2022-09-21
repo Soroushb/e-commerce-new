@@ -15,9 +15,9 @@ const HeroBanner = ({heroBanner}) => {
     transition={{ duration: 0.5 }}>
       <div>
         <motion.div
-        whileInView={{ x: [150, 0], opacity: [0, 1]}}
+        whileinview={{ y: [-50, 0], opacity: [0, 1]}}
         >
-        <h1 className='title'>Anima <br/> <span>Books</span></h1>
+        <h1 className='title'>Anima <br/><span>Books</span></h1>
         </motion.div>
         <motion.div
          whileInView={{ opacity: [0, 1]}}
