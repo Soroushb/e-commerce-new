@@ -41,8 +41,7 @@ const Home = ({products, bannerData}) => {
     }, [])}
 
     <div className='products-heading'>
-      <h2 className='body-title'>Recommended</h2>
-      <p>Second-hand Classic Books in Great Condition</p>
+      <h3>Second-hand Classic Books in Great Condition</h3>
     </div>
 
     <div className="product-filter">

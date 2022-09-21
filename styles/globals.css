@@ -148,6 +148,7 @@ width: 100%;
 .product-filter{
   display: flex;
   flex-direction: row;
+
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -158,9 +159,9 @@ width: 100%;
   border-radius: 0.5em;
   cursor: pointer;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #046307;
+  background-color: #013220;
   color: white;
-  font-weight: 300;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
   margin: 0.5em;
@@ -170,11 +171,12 @@ width: 100%;
   transform: scale(1.2);
 }
 
+
 .item-active{
 
   transform: scale(1.1);
-  background-color: white;
-  color: #046307;
+  background-color: #B8860B;
+  color: white;
   font-weight: 500;
   
 }
@@ -215,7 +217,7 @@ width: 100%;
   color: #B8860B;
   /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
   font-family: snell Roundhand;
-  font-size: 5.5em;
+    font-size: 5.5em;
   margin-left: -20px;
   margin-top: 30px;
   text-transform: uppercase;
@@ -263,15 +265,16 @@ text-align: end;
 .products-heading{
   text-align: center;
   margin: 40px 0px;
- color: #324d67;
+ color: #B8860B;
 
 }
-.products-heading h2{
-  font-size: 50px;
-  color: black;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 800;
+.products-heading h3{
+  font-size: 30px;
+  color: #013220;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
 }
+
 .products-heading p{
   font-size: 16px;
   font-family: 'Times New Roman', Times, serif;
