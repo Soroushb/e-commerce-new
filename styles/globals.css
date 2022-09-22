@@ -285,7 +285,7 @@ text-align: end;
   background-color: #013220;
   border-radius: 15px;
   position: relative;
-  height: 400px;
+  height: 450px;
   line-height: 1; 
   color: #B8860B;
   width: 100%;
@@ -297,9 +297,51 @@ text-align: end;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 50%;
+  width: 33%;
 }
 
+.message-form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.form-label{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+
+.form-input{
+  background-color: #013220;
+  border-width: 3px;
+  border-color: #B8860B;
+  outline: #B8860B;
+  color: white;
+
+}
+
+.form-button{
+  width: 200px;
+
+  padding: 10px 20px;
+  background-color: #B8860B;
+  color: white;
+  border: none;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  
+}
+
+.form-button:hover{
+  transform: scale(1, 1.1);
+  font-weight: 550;
+  transition: transform 0.5s ease;
+}
 
 .banner-desc{
   display: flex ;
