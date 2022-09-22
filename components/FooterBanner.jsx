@@ -29,14 +29,15 @@ const FooterBanner = ({footerBanner: {name, price, details, saleTime, smallText,
     
     <div className='footer-banner-container'>
       <div className='contact'>
-      <form ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
+      <h1>Contact Us</h1>
+      <form className='message-form' ref={form} onSubmit={sendEmail}>
+      <label className='form-label'>Name:</label>
+      <input className='form-input' type="text" name="user_name" />
+      <label className='form-label'>Email:</label>
+      <input className='form-input' type="email" name="user_email" />
+      <label className='form-label'>Message:</label>
+      <textarea className='form-input' name="message" />
+      <input className='form-button' type="submit" value="Send" />
     </form>
       </div>
     </div>   
