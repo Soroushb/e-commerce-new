@@ -216,15 +216,15 @@ width: 100%;
 .hero-banner-container h1{
   color: #B8860B;
   /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
-  font-family: snell Roundhand;
-    font-size: 5.5em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 5.5em;
   margin-left: -20px;
   margin-top: 30px;
   text-transform: uppercase;
 }
 
 .hero-banner-container span{
-  font-family: snell Roundhand;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #B8860B;
 }
 
