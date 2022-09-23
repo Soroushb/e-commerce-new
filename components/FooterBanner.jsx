@@ -16,10 +16,12 @@ const FooterBanner = ({footerBanner: {name, price, details, saleTime, smallText,
     emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_PUBLIC_KEY)
       .then((result) => {
           console.log(result.text);
+          toast.success("Thank you for your feedback!");
+
 
       }, (error) => {
           console.log(error.text);
-          toast.error("Sorry, This feature is unavailable at the moment.");
+          toast.error("An error occured.");
 
       });
   };
