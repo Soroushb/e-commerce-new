@@ -81,6 +81,10 @@ export const StateContext = ({ children }) => {
     });
   }
 
+  const handleRangeFilter = (price) => {
+    
+  }
+
 
   return (
     <Context.Provider
@@ -104,7 +108,7 @@ export const StateContext = ({ children }) => {
         setTotalQuantities,
         setActiveFilter,
         setOurProducts,
-        setFilterProducts,
+        setFilterProducts
       }}
     >
       {children}
