@@ -81,6 +81,7 @@ export const StateContext = ({ children }) => {
     });
   }
 
+
   return (
     <Context.Provider
       value={{
@@ -103,7 +104,7 @@ export const StateContext = ({ children }) => {
         setTotalQuantities,
         setActiveFilter,
         setOurProducts,
-        setFilterProducts
+        setFilterProducts,
       }}
     >
       {children}
