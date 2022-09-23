@@ -126,9 +126,12 @@ width: 100%;
  color: #324d67;
 
 }
+
+
 .product-card:hover{
   transform: scale(1.1,1.1)
 }
+
 .product-image{
   border-radius: 15px;
  background-color: #ebebeb;
@@ -930,6 +933,108 @@ margin-top: 160px;
   width: 300px;
   margin: auto;
 }
+
+.footer-banner-container{
+  padding: 50px 40px;
+  background-color: #013220;
+  border-radius: 15px;
+  position: relative;
+  height: 450px;
+  line-height: 1; 
+  color: #B8860B;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.contact{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 75%;
+}
+
+.message-form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.form-label{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+
+.form-input{
+  background-color: #013220;
+  border-width: 3px;
+  border-color: #B8860B;
+  outline: #B8860B;
+  color: white;
+
+}
+
+.form-button{
+  width: 200px;
+  padding: 10px 20px;
+  background-color: #B8860B;
+  color: white;
+  border: none;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  
+}
+
+.form-button:hover{
+  transform: scale(1, 1.1);
+  font-weight: 550;
+  transition: transform 0.5s ease;
+}
+
+.products-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.product-card{
+  cursor: pointer;
+  display: flex;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+  color: #013220;
+  flex-direction: column;
+  align-items: center;
+ }
+ 
+ .product-image{
+  width: 90%;
+  height: 90%;
+ }
+
+ .product-name{
+  font-weight: 500;
+  margin-top: 4px;
+}
+.product-price{
+  font-weight: 800;
+  margin-top: 6px;
+  color: black;
+}
+ 
+.product-div{
+  width: 42%;
+  height: 42%;
+}
+
 }
 
 @media screen and (max-width:900px) and (min-width: 590px) {
