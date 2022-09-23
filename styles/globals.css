@@ -185,6 +185,7 @@ width: 100%;
 }
 
 
+
 .hero-banner-container{
   padding: 100px 40px;
   background-color: #013220;
@@ -421,6 +422,32 @@ text-align: end;
   padding: 40px 10px;
   position: relative;
   
+}
+
+.filter-price{
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+  margin-top: 20px;
+  
+}
+
+.ranges-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.range-button{
+  margin-left: 13px;
+  border-style:groove;
+  border-width: 1px;
+  border-color: #013220;
+  padding: 4px;
+}
+
+.range-button:hover{
+  cursor: pointer;
 }
 
 .footer-container{
