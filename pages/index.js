@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { Product, FooterBanner, HeroBanner } from '../components'
 import { client } from '../lib/client';
-import { useStateContext } from '../context/StateContext'
+import { useStateContext} from '../context/StateContext'
 import { motion } from 'framer-motion';
 import { AiFillFilter  } from 'react-icons/ai'
 
@@ -11,7 +11,7 @@ import { AiFillFilter  } from 'react-icons/ai'
 
 const Home = ({products, bannerData}) => {
 
-  const {activeFilter, setActiveFilter, ourProducts, setOurProducts, filterProducts, setFilterProducts, showPriceList} = useStateContext();
+  const {activeFilter, setActiveFilter, ourProducts, setOurProducts, filterProducts, setFilterProducts} = useStateContext();
 
   /*useEffect(() => {
     const query = '*[_type == "product"]';
@@ -53,6 +53,11 @@ const Home = ({products, bannerData}) => {
     }, 500);
   };
 
+  const handleRangeFilter = (price) => {
+    setFilterProducts(products.filter((product) => product.price <= price));
+
+  }
+
   return (<>
   <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
 
@@ -82,7 +87,7 @@ const Home = ({products, bannerData}) => {
           <div className='ranges-list'>
             {ranges.map((item, index) => (
               <div className='range-button'>
-                <p>{item.title}</p>
+                <p onClick={() => handleRangeFilter(item.price)}>{item.title}</p>
               </div>
             ))}
           </div>
