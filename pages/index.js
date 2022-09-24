@@ -3,7 +3,7 @@ import { Product, FooterBanner, HeroBanner } from '../components'
 import { client } from '../lib/client';
 import { useStateContext} from '../context/StateContext'
 import { motion } from 'framer-motion';
-import { AiFillFilter  } from 'react-icons/ai'
+import { AiFillFilter, AiOutlineArrowRight  } from 'react-icons/ai'
 
 
 
@@ -12,6 +12,7 @@ import { AiFillFilter  } from 'react-icons/ai'
 const Home = ({products, bannerData}) => {
 
   const {activeFilter, setActiveFilter, ourProducts, setOurProducts, filterProducts, setFilterProducts} = useStateContext();
+  const [range, setRange] = useState(0);
 
   /*useEffect(() => {
     const query = '*[_type == "product"]';
@@ -86,10 +87,17 @@ const Home = ({products, bannerData}) => {
           <h4>Filter Price:</h4>
           <div className='ranges-list'>
             {ranges.map((item, index) => (
+              <div>
               <div className='range-button'>
                 <p onClick={() => handleRangeFilter(item.price)}>{item.title}</p>
               </div>
+             </div>
             ))}
+          </div>
+          <div className='range-manual'>
+              <p>or enter the price:</p>
+              <input className='range-input' type="text" onChange={(e) => setRange(e.target.value)}></input>
+              <div className='range-submit' onClick={() => handleRangeFilter(range)}><AiOutlineArrowRight/></div>
           </div>
       </div>
 
