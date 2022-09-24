@@ -450,6 +450,32 @@ text-align: end;
   cursor: pointer;
 }
 
+.range-manual{
+  display: flex;
+  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.range-input{
+  margin-left: 3px;
+  margin-top: 4px;
+  outline: white;
+}
+
+.range-submit{
+  margin-top: 4px;
+  background-color: #013220;
+  color: white;
+  width: 5%;
+}
+
+.range-submit:hover{
+  cursor: pointer;
+}
+
+
+
 .footer-container{
   color: #324d67;
   text-align: center;
