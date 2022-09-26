@@ -136,7 +136,7 @@ const Home = ({products, bannerData}) => {
             ))}
           </div>
           <div className='range-manual'>
-              <p>or enter the price:</p>
+              <p>Or enter the price:</p>
               <input className='range-input' type="text" onChange={(e) => setRange(e.target.value)}></input>
               <div className='range-submit' onClick={() => handleRangeFilter(range)
               }><AiOutlineArrowRight/></div>
@@ -155,8 +155,12 @@ const Home = ({products, bannerData}) => {
             <input className='author-search-input' type="text" onChange={(e) => handleAuthorSearch(e.target.value.toLowerCase())}/>
       </div>
       }
+
+    
     <div className='products-container'>
-      {filterProducts?.map((product) => <Product key={product._id} product={product}/>)}
+      {filterProducts.length != 0 ? filterProducts?.map((product) => <Product key={product._id} product={product}/>) : 
+      (<h2>Sorry, No Item Was Found.</h2>)}
+      
     </div>
 
     <FooterBanner footerBanner={products[3]}/>
