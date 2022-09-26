@@ -16,6 +16,7 @@ const Home = ({products, bannerData}) => {
   const [range, setRange] = useState(0);
   const [showGenres, setShowGenres] = useState(false)
   const [showPriceRange, setShowPriceRange] = useState(false)
+  const [showTitleSearch, setShowTitleSearch] = useState(false)
  
 
   /*useEffect(() => {
@@ -87,10 +88,17 @@ const Home = ({products, bannerData}) => {
     <div className='filter-options'>
         <div className='filter-option-items'>
         <p className='filter-item' onClick={() => {setShowGenres(!showGenres)
-                                                   setShowPriceRange(false)}}>By Genre</p>
+                                                   setShowPriceRange(false)
+                                                   setShowTitleSearch(false)}}>By Genre</p>
         <p className='filter-item'>By Author</p>
-        <p className='filter-item'>By Title</p>
-        <p className='filter-item'>By Price</p>
+        
+        <p className='filter-item' onClick={() => {setShowTitleSearch(!showTitleSearch)
+                                                   setShowPriceRange(false)
+                                                   setShowGenres(false)}}>By Title</p>
+
+        <p className='filter-item' onClick={() => {setShowPriceRange(!showPriceRange)
+                                                   setShowGenres(false)
+                                                   setShowTitleSearch(false)}}>By Price</p>
         </div>
     </div>
     }
@@ -107,7 +115,7 @@ const Home = ({products, bannerData}) => {
         ))}
       </div>
       }
-      {  
+      { showPriceRange &&
       <div className='filter-price'>
           <div className='ranges-list'>
             {ranges.map((item, index) => (
@@ -125,10 +133,12 @@ const Home = ({products, bannerData}) => {
           </div>
       </div>
       }
+      { showTitleSearch &&
       <div className='title-search'>
-            <input type="text" onChange={(e) => handleTitleSearch(e.target.value.toLowerCase())}/>
+            <p>Please Enter the Title:</p>
+            <input className='title-search-input' type="text" onChange={(e) => handleTitleSearch(e.target.value.toLowerCase())}/>
       </div>
-
+      }
     <div className='products-container'>
       {filterProducts?.map((product) => <Product key={product._id} product={product}/>)}
     </div>
