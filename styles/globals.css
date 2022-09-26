@@ -487,6 +487,7 @@ text-align: end;
   padding: 15px;
   font-weight: 600;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 5px;
 }
 
 .filter-button:hover{
@@ -495,6 +496,24 @@ text-align: end;
   transition: transform 0.5s ease;
 }
 
+
+.filter-options{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.filter-item{
+  background-color: #013220;
+  color: white;
+  border-style:double;
+  padding: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 13px;
+ 
+}
 
 
 .footer-container{
