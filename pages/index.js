@@ -13,6 +13,8 @@ const Home = ({products, bannerData}) => {
 
   const {activeFilter, setActiveFilter, ourProducts, setOurProducts, filterProducts, setFilterProducts} = useStateContext();
   const [range, setRange] = useState(0);
+  const [showGenres, setShowGenres] = useState(false)
+  const [showPriceRange, setShowPriceRange] = useState(false)
 
   /*useEffect(() => {
     const query = '*[_type == "product"]';
@@ -56,7 +58,10 @@ const Home = ({products, bannerData}) => {
 
   const handleRangeFilter = (price) => {
     setFilterProducts(products.filter((product) => product.price <= price));
+  }
 
+  const handleTitleSearch = (title) => {
+    setFilterProducts(products.filter((product) => product.name.toLowerCase().includes(title)))
   }
 
   return (<>
@@ -69,7 +74,7 @@ const Home = ({products, bannerData}) => {
     <div className='products-heading'>
       <h3>Second-hand Classic Books in Great Condition</h3>
     </div>
-
+    { showGenres &&
     <div className="product-filter">
         {['ALL', 'FICTION', 'PHILOSOPHY', 'ART', 'POETRY', 'OTHER'].map((item, index) => (
           <div
@@ -81,7 +86,7 @@ const Home = ({products, bannerData}) => {
           </div>
         ))}
       </div>
-
+      }
       <div className='filter-price'>
           <AiFillFilter/>
           <h4>Filter Price:</h4>
@@ -99,6 +104,10 @@ const Home = ({products, bannerData}) => {
               <input className='range-input' type="text" onChange={(e) => setRange(e.target.value)}></input>
               <div className='range-submit' onClick={() => handleRangeFilter(range)}><AiOutlineArrowRight/></div>
           </div>
+      </div>
+
+      <div className='title-search'>
+            <input type="text" onChange={(e) => handleTitleSearch(e.target.value.toLowerCase())}/>
       </div>
 
     <div className='products-container'>
