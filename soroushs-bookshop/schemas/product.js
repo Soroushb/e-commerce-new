@@ -41,7 +41,14 @@ export default {
             name: 'tag',
             title: 'Tag',
            type:'string',
+        },
+
+        {
+            name: 'author',
+            title: 'Author',
+           type:'string',
         }
+
     ]
 
 }

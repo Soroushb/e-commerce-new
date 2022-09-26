@@ -6,9 +6,6 @@ import { motion } from 'framer-motion';
 import { AiFillFilter, AiOutlineArrowRight  } from 'react-icons/ai'
 
 
-
-
-
 const Home = ({products, bannerData}) => {
 
   const {activeFilter, setActiveFilter, ourProducts, setOurProducts, filterProducts, setFilterProducts} = useStateContext();
@@ -17,7 +14,8 @@ const Home = ({products, bannerData}) => {
   const [showGenres, setShowGenres] = useState(false)
   const [showPriceRange, setShowPriceRange] = useState(false)
   const [showTitleSearch, setShowTitleSearch] = useState(false)
- 
+  const [showAuthorSearch, setShowAuthorSearch] = useState(false)
+
 
   /*useEffect(() => {
     const query = '*[_type == "product"]';
@@ -67,6 +65,10 @@ const Home = ({products, bannerData}) => {
     setFilterProducts(products.filter((product) => product.name.toLowerCase().includes(title)))
   }
 
+  const handleAuthorSearch = (title) => {
+    setFilterProducts(products.filter((product) => product.author.toLowerCase().includes(title)))
+  }
+
   return (<>
   <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
 
@@ -89,16 +91,23 @@ const Home = ({products, bannerData}) => {
         <div className='filter-option-items'>
         <p className='filter-item' onClick={() => {setShowGenres(!showGenres)
                                                    setShowPriceRange(false)
-                                                   setShowTitleSearch(false)}}>By Genre</p>
-        <p className='filter-item'>By Author</p>
+                                                   setShowTitleSearch(false)
+                                                   setShowAuthorSearch(false)}}>By Genre</p>
+
+        <p className='filter-item' onClick={() => {setShowAuthorSearch(!showAuthorSearch)
+                                                   setShowPriceRange(false)
+                                                   setShowGenres(false)
+                                                   setShowTitleSearch(false)}}>By Author</p>
         
         <p className='filter-item' onClick={() => {setShowTitleSearch(!showTitleSearch)
                                                    setShowPriceRange(false)
-                                                   setShowGenres(false)}}>By Title</p>
+                                                   setShowGenres(false)
+                                                   setShowAuthorSearch(false)}}>By Title</p>
 
         <p className='filter-item' onClick={() => {setShowPriceRange(!showPriceRange)
                                                    setShowGenres(false)
-                                                   setShowTitleSearch(false)}}>By Price</p>
+                                                   setShowTitleSearch(false)
+                                                   setShowAuthorSearch(false)}}>By Price</p>
         </div>
     </div>
     }
@@ -120,8 +129,8 @@ const Home = ({products, bannerData}) => {
           <div className='ranges-list'>
             {ranges.map((item, index) => (
               <div>
-              <div className='range-button'>
-                <p onClick={() => handleRangeFilter(item.price)}>{item.title}</p>
+              <div>
+                <p  className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`} onClick={() => handleRangeFilter(item.price)}>{item.title}</p>
               </div>
              </div>
             ))}
@@ -129,7 +138,8 @@ const Home = ({products, bannerData}) => {
           <div className='range-manual'>
               <p>or enter the price:</p>
               <input className='range-input' type="text" onChange={(e) => setRange(e.target.value)}></input>
-              <div className='range-submit' onClick={() => handleRangeFilter(range)}><AiOutlineArrowRight/></div>
+              <div className='range-submit' onClick={() => handleRangeFilter(range)
+              }><AiOutlineArrowRight/></div>
           </div>
       </div>
       }
@@ -137,6 +147,12 @@ const Home = ({products, bannerData}) => {
       <div className='title-search'>
             <p>Please Enter the Title:</p>
             <input className='title-search-input' type="text" onChange={(e) => handleTitleSearch(e.target.value.toLowerCase())}/>
+      </div>
+      }
+      { showAuthorSearch &&
+      <div className='author-search'>
+            <p>Please Enter the Author's name:</p>
+            <input className='author-search-input' type="text" onChange={(e) => handleAuthorSearch(e.target.value.toLowerCase())}/>
       </div>
       }
     <div className='products-container'>
