@@ -429,8 +429,7 @@ text-align: end;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 20px;
-  
+  margin-top: 5px;  
 }
 
 .title-search{
@@ -441,6 +440,21 @@ text-align: end;
 }
 
 .title-search-input{
+  border-radius: 2px;
+  outline: white;
+  color: #013220;
+  font-weight: 750;
+  margin-left: 5px;
+}
+
+.author-search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.author-search-input{
   border-radius: 2px;
   outline: white;
   color: #013220;
@@ -459,11 +473,16 @@ text-align: end;
   border-style:groove;
   border-width: 1px;
   border-color: #013220;
-  padding: 4px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #013220;
+  color: white;
 }
 
 .range-button:hover{
   cursor: pointer;
+  transform: scale(1.1, 1,1);
+  transition: transform 0.5s ease;
 }
 
 .range-manual{
@@ -520,6 +539,10 @@ text-align: end;
   flex-direction: row;
 }
 
+.filter-option-items{
+  display: flex;
+}
+
 .filter-item{
   background-color: #013220;
   color: white;
@@ -528,6 +551,7 @@ text-align: end;
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 13px;
+  margin: 4.5px
 }
 
 .filter-item:hover{
