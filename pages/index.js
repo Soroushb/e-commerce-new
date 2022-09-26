@@ -86,9 +86,11 @@ const Home = ({products, bannerData}) => {
     { showFilterOptions &&
     <div className='filter-options'>
         <div className='filter-option-items'>
-              <p className='filter-item'>By Author</p>
-              <p className='filter-item'>By Title</p>
-              <p className='filter-item'>By Price</p>
+        <p className='filter-item' onClick={() => {setShowGenres(!showGenres)
+                                                   setShowPriceRange(false)}}>By Genre</p>
+        <p className='filter-item'>By Author</p>
+        <p className='filter-item'>By Title</p>
+        <p className='filter-item'>By Price</p>
         </div>
     </div>
     }
@@ -105,9 +107,8 @@ const Home = ({products, bannerData}) => {
         ))}
       </div>
       }
+      {  
       <div className='filter-price'>
-          <AiFillFilter/>
-          <h4>Filter Price:</h4>
           <div className='ranges-list'>
             {ranges.map((item, index) => (
               <div>
@@ -123,7 +124,7 @@ const Home = ({products, bannerData}) => {
               <div className='range-submit' onClick={() => handleRangeFilter(range)}><AiOutlineArrowRight/></div>
           </div>
       </div>
-
+      }
       <div className='title-search'>
             <input type="text" onChange={(e) => handleTitleSearch(e.target.value.toLowerCase())}/>
       </div>

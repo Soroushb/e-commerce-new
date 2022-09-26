@@ -427,7 +427,8 @@ text-align: end;
 .filter-price{
   display: flex;
   align-items: center;
-  margin-left: 2%;
+  justify-content: center;
+  flex-direction: column;
   margin-top: 20px;
   
 }
@@ -512,9 +513,13 @@ text-align: end;
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 13px;
- 
 }
 
+.filter-item:hover{
+  cursor: pointer;
+  transform: scale(1.05,1.05);
+  transition: transform 0.5s ease;
+}
 
 .footer-container{
   color: #324d67;
