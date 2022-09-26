@@ -74,6 +74,13 @@ const Home = ({products, bannerData}) => {
     <div className='products-heading'>
       <h3>Second-hand Classic Books in Great Condition</h3>
     </div>
+
+    <div className='filter-option'>
+      <div className='filter-button'>
+        Filter Books <AiFillFilter/>
+      </div>
+    </div>
+
     { showGenres &&
     <div className="product-filter">
         {['ALL', 'FICTION', 'PHILOSOPHY', 'ART', 'POETRY', 'OTHER'].map((item, index) => (
