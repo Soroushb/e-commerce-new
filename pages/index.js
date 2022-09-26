@@ -12,9 +12,11 @@ import { AiFillFilter, AiOutlineArrowRight  } from 'react-icons/ai'
 const Home = ({products, bannerData}) => {
 
   const {activeFilter, setActiveFilter, ourProducts, setOurProducts, filterProducts, setFilterProducts} = useStateContext();
+  const [showFilterOptions, setShowFilterOptions] = useState(false)
   const [range, setRange] = useState(0);
   const [showGenres, setShowGenres] = useState(false)
   const [showPriceRange, setShowPriceRange] = useState(false)
+ 
 
   /*useEffect(() => {
     const query = '*[_type == "product"]';
@@ -76,11 +78,20 @@ const Home = ({products, bannerData}) => {
     </div>
 
     <div className='filter-option'>
-      <div className='filter-button'>
+      <div className='filter-button' onClick={() => setShowFilterOptions(!showFilterOptions)}>
         Filter Books <AiFillFilter/>
       </div>
     </div>
 
+    { showFilterOptions &&
+    <div className='filter-options'>
+        <div className='filter-option-items'>
+              <p className='filter-item'>By Author</p>
+              <p className='filter-item'>By Title</p>
+              <p className='filter-item'>By Price</p>
+        </div>
+    </div>
+    }
     { showGenres &&
     <div className="product-filter">
         {['ALL', 'FICTION', 'PHILOSOPHY', 'ART', 'POETRY', 'OTHER'].map((item, index) => (
