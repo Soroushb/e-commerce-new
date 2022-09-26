@@ -433,6 +433,21 @@ text-align: end;
   
 }
 
+.title-search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.title-search-input{
+  border-radius: 2px;
+  outline: white;
+  color: #013220;
+  font-weight: 750;
+  margin-left: 5px;
+}
+
 .ranges-list{
   display: flex;
   justify-content: center;
