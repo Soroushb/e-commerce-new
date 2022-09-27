@@ -140,8 +140,16 @@ width: 100%;
 }
 
 .product-name{
-  font-weight: 500;
+  font-weight: 700;
+  margin-top: 4px;
+  color: #013220;
 }
+
+.product-author{
+  font-weight: 300;
+  margin-top: 3px;
+}
+
 .product-price{
   font-weight: 800;
   margin-top: 6px;
@@ -1169,9 +1177,15 @@ margin-top: 160px;
  }
 
  .product-name{
-  font-weight: 500;
+  font-weight: 700;
   margin-top: 4px;
 }
+
+.product-author{
+  font-weight: 300;
+  margin-top: 3px;
+}
+
 .product-price{
   font-weight: 800;
   margin-top: 6px;
@@ -1181,6 +1195,11 @@ margin-top: 160px;
 .product-div{
   width: 42%;
   height: 42%;
+}
+
+.maylike-products-container img{
+    width: 200px;
+    height: 250px;
 }
 
 }
