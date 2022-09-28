@@ -156,13 +156,15 @@ const Home = ({products, bannerData}) => {
       </div>
       }
 
-    
+    <motion.div
+        whileInView={{ opacity: [0.3, 1]}}
+        >
     <div className='products-container'>
       {filterProducts.length != 0 ? filterProducts?.map((product) => <Product key={product._id} product={product}/>) : 
       (<h2>Sorry, No Item Was Found.</h2>)}
       
     </div>
-
+    </motion.div>
     <FooterBanner footerBanner={products[3]}/>
     </>
   )
