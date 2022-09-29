@@ -985,6 +985,12 @@ margin-top: 160px;
     flex-wrap: wrap;
     gap: 20px;
   }
+
+  .cart-name-price{
+    display: flex;
+    flex-direction: column;
+  }
+
   .hero-banner-container{
     line-height: 1.1;
   }
