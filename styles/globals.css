@@ -677,7 +677,7 @@ padding: 20px 10px;
 }
 .cart-bottom{
   position: absolute;
-  bottom: 12px;
+  bottom: 1px;
   right: 5px;
 width: 100%;
 padding: 30px 65px;
@@ -991,6 +991,10 @@ margin-top: 160px;
     flex-direction: column;
   }
 
+  .cart-bottom btn{
+    background-color: #013220;
+  }
+
   .hero-banner-container{
     line-height: 1.1;
   }
@@ -1093,8 +1097,9 @@ margin-top: 160px;
   font-size: 17px;
 }
 .btn-container{
-  width: 300px;
+  width: 100px;
   margin: auto;
+  margin-bottom: 15px;
 }
 
 .footer-banner-container{
@@ -1239,4 +1244,6 @@ margin-top: 160px;
   height: 99%;
   border-radius: 10px;
   }
+
+  
 }
