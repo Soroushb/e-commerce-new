@@ -157,7 +157,7 @@ const Home = ({products, bannerData}) => {
       }
 
     <motion.div
-        whileInView={{ opacity: [0.3, 1]}}
+        whileInView={{ y: [20, 0]}}
         >
     <div className='products-container'>
       {filterProducts.length != 0 ? filterProducts?.map((product) => <Product key={product._id} product={product}/>) : 
