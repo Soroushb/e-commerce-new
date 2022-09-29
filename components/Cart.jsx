@@ -70,17 +70,13 @@ const Cart = () => {
         </div>
 
           {cartItems.length >= 1 && (
-            <div className='cart-bottom'>
-              <div className='total'> 
-                <h3>Subtotal:</h3>
-                <h3>${totalPrice}</h3>
-              </div>
               <div className='btn-container'>
                 <button type='button' className='btn' onClick={() => buyNow()}>
                   Check Out
+                  <p>Total: ${totalPrice}</p>
                 </button>
               </div>
-            </div>
+           
           )}
       </div>
     </div>
